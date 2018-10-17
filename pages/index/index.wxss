@@ -21,12 +21,9 @@
   background-size: cover;
   background-color: white;
 }
-
-
 .userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
 }
