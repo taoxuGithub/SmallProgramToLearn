@@ -27,3 +27,19 @@
   background-color: white;
   background-size: cover;
 }
+.addADiary-view{
+  margin-top: 1rpx;
+  background-color: white;
+  height: auto;
+  width: 100%;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.addADiary-text{
+  width: 100%;
+  line-height: 26px;
+  font-size: 34rpx;
+  color: #007aff;
+}

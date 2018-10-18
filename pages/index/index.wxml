@@ -13,4 +13,10 @@
       {{requestResult}}</button>
     </view>
   </view>
+  <!-- 新建云函数 -->
+  <view class="addADiary-view">
+    <navigator url="../addADiary/addADiary" open-type="navigate" class="addADiary-text">
+      <text>新建记事</text>
+    </navigator>
+  </view>
 </view>

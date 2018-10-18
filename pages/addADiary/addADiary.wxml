@@ -1,0 +1,26 @@
+<view>
+  <view class="the-title">
+    <view class="the-title-title">标题：</view>
+    <view class="the-title-text-title">
+        <input bindinput='TitleInput'
+          class="the-title-input" 
+          maxlength="25" 
+          auto-focus placeholder="输入标题"/>
+    </view>
+  </view>
+
+  <view class="the-remember">
+    <view class="the-remember-title">正文：</view>
+    <view class="the-remember-text-textarea">
+        <textarea bindinput ="RememberInput"
+          class="the-remember-textarea"
+          auto-focus="true"
+          style="height: 30em"
+          maxlength="1000"
+          placeholder="输入内容"/>
+    </view>
+  </view>
+  <view class="the-commit">
+    <button class="the-commit-button" bindtap="ADiaryCommit">保存</button>
+  </view>
+</view>

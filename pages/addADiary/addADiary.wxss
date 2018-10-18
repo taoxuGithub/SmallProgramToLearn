@@ -1,0 +1,49 @@
+.the-title{
+
+}
+.the-title-title{
+  color: rgb(26, 57, 233);
+  background-color: white;
+}
+.the-title-text-title{
+  width: 100%;
+  margin-bottom: 0px;
+  color: rgb(26, 57, 233);
+  background-color: white;
+}
+.the-title-input{
+  color: rgb(0, 0, 0);
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  background-color: rgb(218, 245, 245);
+}
+.the-remember{
+}
+.the-remember-title{
+  width: 100%;
+  margin-bottom: 10rpx;
+  color: rgb(26, 57, 233);
+  background-color: white;
+}
+.the-remember-text-textarea{
+  margin-bottom: 0;
+}
+.the-remember-textarea{
+  font-size: 28rpx;
+  color:rgb(0, 0, 0);
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background-color: rgb(218, 245, 245);
+}
+.the-commit{
+
+}
+.the-commit-button{  
+  width: 80%;
+  font-size: 50rpx;
+  margin-top: 10;
+  margin-left: 10%;
+  color:black;
+  background-color: rgb(99, 218, 153);
+}
