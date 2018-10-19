@@ -1,13 +1,13 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    array: [1,2]
   },
 
   onLoad: function () {
@@ -27,6 +27,18 @@ Page({
           })
         }
       }
+    })
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('ADiary').where({
+      _openid: this.data.openid
+    }).get({
+      success: res => {
+        this.setData({
+          queryResult: JSON.stringify(res.data, null, 2)
+        })
+        console.log('[数据库] [查询记录] 成功: ', res)
+      },
     })
     console.log("初始化index")
   },
