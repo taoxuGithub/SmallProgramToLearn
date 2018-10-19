@@ -7,7 +7,7 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    array: [1,2]
+    array: [],
   },
 
   onLoad: function () {
@@ -34,8 +34,20 @@ Page({
       _openid: this.data.openid
     }).get({
       success: res => {
+        console.log(res.data)
+        const length = res.data.length
+        const s=''
+        for (let i = 0; i < length; ++i) {
+          var newArray = [{
+            Title: res.data[i].Title,
+            Remember: res.data[i].Remember,
+            ThisDateTime: res.data[i].ThisDateTime
+          }];
+          console.log(newArray)
+          this.data.array= this.data.array.concat(newArray)
+        }
         this.setData({
-          queryResult: JSON.stringify(res.data, null, 2)
+          array: this.data.array
         })
         console.log('[数据库] [查询记录] 成功: ', res)
       },
