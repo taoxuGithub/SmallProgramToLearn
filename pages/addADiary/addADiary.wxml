@@ -1,4 +1,8 @@
 <view>
+  <view class="the-commit">
+    <button class="the-commit-button" bindtap="ADiaryCommit">保   存</button>
+    <button class="the-close-button" bindtap="ADiaryClose">关   闭</button>
+  </view>
   <view class="the-title">
     <view class="the-title-title">标题：</view>
     <view class="the-title-text-title">
@@ -20,7 +24,6 @@
           placeholder="输入内容"/>
     </view>
   </view>
-  <view class="the-commit">
-    <button class="the-commit-button" bindtap="ADiaryCommit">保存</button>
+  <view>{{ThisDateTime}}
   </view>
 </view>

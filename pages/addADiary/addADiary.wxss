@@ -37,13 +37,21 @@
   background-color: rgb(218, 245, 245);
 }
 .the-commit{
-
+  height: 120rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction:row;
 }
 .the-commit-button{  
-  width: 80%;
+  width: 50%;
   font-size: 50rpx;
-  margin-top: 10;
-  margin-left: 10%;
   color:black;
   background-color: rgb(99, 218, 153);
+}
+.the-close-button{
+  width: 50%;
+  font-size: 50rpx;
+  color:black;
+  background-color: rgb(235, 243, 239);
 }
