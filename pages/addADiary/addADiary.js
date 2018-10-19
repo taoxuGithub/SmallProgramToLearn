@@ -5,7 +5,7 @@ var Remember = ''
 var ThisDateTime = util.formatTime(new Date())
 Page({
   data: {
-    ThisDateTime
+    ThisDateTime:util.formatTime(new Date())
   },
   TitleInput: function (e) {
     console.info(e),
@@ -20,9 +20,6 @@ Page({
     this.setData({
       ThisDateTime: util.formatTime(new Date())
     })
-  },
-  ADiaryClose:function(){
-    wx.navigateBack();
   },
   ADiaryCommit: function () {
     ThisDateTime = util.formatTime(new Date()),
@@ -67,6 +64,32 @@ Page({
         console.error('[数据库] [新增记录] 失败：', err)
       }
     })
-  }
+  },
+  ADiaryClose: function () {
+    if(Title!=""){
+    }
+    if (Remember!=""){
+      wx.showModal({
+        title: '提示',
+        content: '当前记事本中有内容未保存是否放弃',
+        success: function (res) {
+          if (res.confirm) {
+            Title = "";
+            Remember = "";
+            wx.navigateBack();
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }else{
+      Title = "";
+      Remember = "";
+      wx.navigateBack();
+      console.log('用户点击确定')
+    }
+    
+  },
 }
 )

@@ -28,6 +28,7 @@ Page({
         }
       }
     })
+    console.log("初始化index")
   },
   onGetUserInfo: function (e) {
     if (!this.logged && e.detail.userInfo) {
@@ -38,23 +39,10 @@ Page({
       })
     }
   },
-  onGetOpenid:function(){
-
-    // 调用云函数
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
-        wx.showToast({
-          title: res.result.openid,
-        })
-        // this.setData({
-        //   requestResult: JSON.stringify(res.result.openid)
-        // })
-      },
+  addADiary:function(){
+    wx.navigateTo({
+      url: '../addADiary/addADiary',
     })
-  }
+  },
 }
 )

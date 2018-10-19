@@ -3,7 +3,7 @@
 }
 .the-title-title{
   color: rgb(26, 57, 233);
-  background-color: white;
+  background-color: rgb(231, 245, 245);
 }
 .the-title-text-title{
   width: 100%;
@@ -18,15 +18,16 @@
   background-color: rgb(218, 245, 245);
 }
 .the-remember{
+  background-color: rgb(218, 245, 245);
 }
 .the-remember-title{
   width: 100%;
   margin-bottom: 10rpx;
   color: rgb(26, 57, 233);
-  background-color: white;
+  background-color: rgb(231, 245, 245);
 }
 .the-remember-text-textarea{
-  margin-bottom: 0;
+  margin-bottom: 10;
 }
 .the-remember-textarea{
   font-size: 28rpx;
@@ -54,4 +55,8 @@
   font-size: 50rpx;
   color:black;
   background-color: rgb(235, 243, 239);
+}
+.the-ThisDateTime-text{
+  color:rgb(159, 161, 160);
+  background-color: white;
 }
