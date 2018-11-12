@@ -14,5 +14,7 @@
   </view>
 </view>
 <view wx:for="{{array}}">
-{{index+1}}：{{item.Title}},{{item.Remember}},{{item.ThisDateTime}}.
+  <view>
+   {{index+1}}：{{item.Title}},{{item.Remember}},{{item.ThisDateTime}}.  
+  </view>
 </view>
