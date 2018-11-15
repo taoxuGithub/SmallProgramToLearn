@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const util = require('../../utils/util.js')//导入
 Page({
   data: {
     userInfo: {},
@@ -36,14 +37,14 @@ Page({
       success: res => {
         console.log(res.data)
         const length = res.data.length
-        const s=''
+        // const s=''
         for (let i = 0; i < length; ++i) {
           var newArray = [{
             Title: res.data[i].Title,
             Remember: res.data[i].Remember,
+            Remembers: util.sub(res.data[i].Remember),
             ThisDateTime: res.data[i].ThisDateTime
           }];
-          console.log(newArray)
           this.data.array= this.data.array.concat(newArray)
         }
         this.setData({
