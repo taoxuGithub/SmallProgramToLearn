@@ -18,7 +18,7 @@
     {{index+1}}：{{item.Title}}  
   </view>
   <view>
-    {{item.Remembers}}
+    {{item.Remember}}
   </view>
   <view class='ThisDateTime'>
     {{item.ThisDateTime}}
