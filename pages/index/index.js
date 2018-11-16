@@ -40,6 +40,7 @@ Page({
         // const s=''
         for (let i = 0; i < length; ++i) {
           var newArray = [{
+            NumberId:i+1,
             Title: res.data[i].Title,
             Remember: res.data[i].Remember,
             Remembers: util.sub(res.data[i].Remember),

@@ -13,9 +13,9 @@
     </view>
   </view>
 </view>
-<view wx:for="{{array}}">
+<view wx:for="{{array}}" wx:key="NumberId">
   <view>
-    {{index+1}}：{{item.Title}}  
+    {{item.NumberId}}：{{item.Title}}  
   </view>
   <view>
     {{item.Remember}}
