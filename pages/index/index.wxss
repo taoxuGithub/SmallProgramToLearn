@@ -28,3 +28,8 @@
   background-size: cover;
 }
 
+.ThisDateTime{
+  width: 100%;
+  color: rgb(121, 120, 120);
+}
+

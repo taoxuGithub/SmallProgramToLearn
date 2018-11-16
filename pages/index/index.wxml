@@ -20,7 +20,7 @@
   <view>
     {{item.Remembers}}
   </view>
-  <view>
+  <view class='ThisDateTime'>
     {{item.ThisDateTime}}
   </view>
 </view>
