@@ -1,4 +1,4 @@
-<view>
+<view class="totle">
   <view class="the-commit">
     <button class="the-commit-button" bindtap="ADiaryCommit">保   存</button>
     <button class="the-close-button" bindtap="ADiaryClose">关   闭</button>
