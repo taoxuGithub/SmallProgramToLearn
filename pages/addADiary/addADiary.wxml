@@ -6,8 +6,10 @@
   <view class="the-title">
     <!--<view class="the-title-title">标题：</view>-->
     <view class="the-title-text-title">
+      <!--auto-focus="true"自动对焦-->
         <input bindinput='TitleInput'
           class="the-title-input" 
+          auto-focus="true"
           maxlength="25" 
           auto-focus placeholder="无标题"/>
     </view>
@@ -18,7 +20,6 @@
     <view class="the-remember-text-textarea">
         <textarea bindinput ="RememberInput"
           class="the-remember-textarea"
-          auto-focus="true"
           style="height: 35em"
           maxlength="1000"
           placeholder="无内容"/>
