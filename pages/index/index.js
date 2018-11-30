@@ -12,32 +12,55 @@ Page({
   },
 
   onLoad: function () {
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo,
-              })
-            }
-          })
-        }
-      }
-    })
+    // wx.cloud.callFunction({
+    //   name: 'login',
+    //   success: res => {
+    //     console.log('[云函数] [login] user openid: ', res.result.openid)
+    //     app.globalData.openid = res.result.openid
+    //   },
+    //   fail: err => {
+    //     console.error('[云函数] [login] 调用失败', err)
+    //   }
+    // })
+    // // 获取用户信息API中已经废弃wx.getSetting方法
+    // wx.getSetting({
+    //   success: res => {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    //       wx.getUserInfo({
+    //         success: res => {
+    //           this.setData({
+    //             avatarUrl: res.userInfo.avatarUrl,
+    //             userInfo: res.userInfo,
+    //           })
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
+     // 查看是否授权
+    // wx.getSetting({
+    //   success (res){
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+    //       wx.getUserInfo({
+    //         success: function(res) {
+    //           console.log(res.userInfo)
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
+  // bindGetUserInfo (e) {/
+    console.log(this.data.openid)
+  // }
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters
     db.collection('ADiary').where({
       _openid: this.data.openid
     }).get({
       success: res => {
-        console.log(res.data)
         const length = res.data.length
-        // const s=''
         for (let i = 0; i < length; ++i) {
           var newArray = [{
             NumberId:i+1,
@@ -51,12 +74,13 @@ Page({
         this.setData({
           array: this.data.array
         })
-        console.log('[数据库] [查询记录] 成功: ', res)
+        // console.log('[数据库] [查询记录] 成功: ', res)
       },
     })
-    console.log("初始化index")
+    // console.log("初始化index")
   },
   onGetUserInfo: function (e) {
+    // console.log(e)
     if (!this.logged && e.detail.userInfo) {
       this.setData({
         logged: true,

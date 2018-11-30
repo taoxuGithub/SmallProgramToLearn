@@ -2,12 +2,16 @@
 <view class="container">
   <!-- 用户 openid -->
   <view class="userinfo">
-    <button 
+  <open-data type="userAvatarUrl"
+  bindgetuserinfo="onGetUserInfo"
+  class="userinfo-avatar">
+  </open-data>
+    <!-- <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
       style="background-image: url({{avatarUrl}})"
-    ></button>
+    ></button> -->
     <view>
       <button class="addADiary-view" bindtap="addADiary">新建记事信息</button>
     </view>
